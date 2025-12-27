@@ -67,12 +67,17 @@ pip install requests python-dotenv google-generativeai
 
 ## ▶️ How to Run
 
-Start the backend first (must expose `/menu` and `/order`).
-
-Then run:
+Start Backend
 
 ```bash
-python ordering_agent.py
+uvicorn backend.app:app --reload
+```
+
+Run Ordering Agent
+python agents/ordering_agent.py
+
+```bash
+python agents/ordering_agent.py
 ```
 
 ---
@@ -120,7 +125,3 @@ This gives a realistic delivery time for the whole order.
 * Gemini is used only when rule-based parsing fails
 * It extracts items and quantities from user sentences
 * Keeps the system flexible for natural language input
-
----
-
-Just tell me 👍
