@@ -1,0 +1,23 @@
+{
+  "protocol": "mcp",
+  "version": "1.0",
+  "tools": [
+    {
+      "name": "get__menu",
+      "description": "Get Menu",
+      "method": "GET",
+      "path": "/menu",
+      "input_schema": {},
+      "output_schema": {
+        "description": "Successful Response",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/MenuResponse"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
